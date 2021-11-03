@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 const api = {
-  key: "462120d6c41324fa0c638ebba0de876f",
+  key: '462120d6c41324fa0c638ebba0de876f',
   base: "https://api.openweathermap.org/data/2.5/"
 }
+// console.log(api.key)
 
 function App() {
   const [query, setQuery] = useState('');
@@ -41,7 +42,7 @@ function App() {
         {(typeof weather.main !== 'undefined') ? (
           <div>
             <div className="location-box">
-              <div className="location">{weather.name}, {weather, weather.sys.country}</div>
+              <div className="location">{weather.name}, {weather.sys.country}</div>
               <div className="date">{dateBuilder(new Date())}</div>
             </div>
             <div className="weather-box">
